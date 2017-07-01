@@ -1,1 +1,19 @@
-<h1>This is the search component</h1>
+<h1>Need Music?</h1>
+<p class="lead">Use this A2 Spotify app to browse for new music, and find your favorite songs.</p>
+
+<form class="">
+    <div class="form-group">
+        <input class="form-control" type="text" placeholder="Search Artists" [(ngModel)]="searchStr" name="searchStr" (keyup)="searchSwapi()">
+    </div>
+</form>
+
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        {{ res.name }}
+        <!-- {{ res.birth_year }}
+        {{ res.height }}
+        {{ res.homeworld }}
+        {{ res.starships }}
+        {{ res.url }} -->
+    </div>
+</div>
